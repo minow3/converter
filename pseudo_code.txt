@@ -1,0 +1,20 @@
+//All conversions Temperature, Distance, Weight
+Create class Conversion
+
+	//Temperature calculation methods
+	create method CelsiusToFahrenheit (public static double)
+		return Fahrenheit (formula)
+	create method FahrenheitToCelsius (public static double)
+		return Celsius (formula)
+	create method CelsiusToKelvin (public static double)
+		return Kelvin (formula)
+	create method KelvinToCelsius (public static double)
+		return Celsius (formula)
+	create method FahrenheitToKelvin (public static double)
+		return Kelvin (formula)
+	create method KelvinToFahrenheit (public static double)
+		return Fahrenheit (formula)
+
+	// Distance conversion methods
+	create method CelsiusToFahrenheit (public static double)
+		return Fahrenheit (formula)
