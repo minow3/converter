@@ -1,6 +1,6 @@
 ﻿using System;
 
-class Converter
+class Temperature
 {
     // Temperature conversion methods
     public static double CelsiusToFahrenheit(double celsius)
@@ -32,7 +32,10 @@ class Converter
     {
         return (fahrenheit - 273.15) * 9 / 5 + 32;
     }
+}
 
+class Distance
+{
     // Distance conversion methods
     public static double MetersToFeet(double meters)
     {
@@ -43,7 +46,10 @@ class Converter
     {
         return feet / 3.28084;
     }
+}
 
+class Weight
+{
     // Weight conversion methods
     public static double KilogramsToPounds(double kilograms)
     {
@@ -127,32 +133,32 @@ class Program
         switch (choice)
         {
             case 1:
-                result = Converter.CelsiusToFahrenheit(input);
+                result = Temperature.CelsiusToFahrenheit(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Celsius is equal to {result} Fahrenheit.");
                 break;
             case 2:
-                result = Converter.FahrenheitToCelsius(input);
+                result = Temperature.FahrenheitToCelsius(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Fahrenheit is equal to {result} Celsius.");
                 break;
             case 3:
-                result = Converter.CelsiusToKelvin(input);
+                result = Temperature.CelsiusToKelvin(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Celsius is equal to {result} Kelvin.");
                 break;
             case 4:
-                result = Converter.KelvinToCelsius(input);
+                result = Temperature.KelvinToCelsius(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Kelvin is equal to {result} Celsius.");
                 break;
             case 5:
-                result = Converter.FahrenheitToKelvin(input);
+                result = Temperature.FahrenheitToKelvin(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Fahrenheit is equal to {result} Kelvin.");
                 break;
             case 6:
-                result = Converter.KelvinToFahrenheit(input);
+                result = Temperature.KelvinToFahrenheit(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Kelvin is equal to {result} Fahrenheit.");
                 break;
@@ -183,12 +189,12 @@ class Program
         switch (choice)
         {
             case 1:
-                result = Converter.MetersToFeet(input);
+                result = Distance.MetersToFeet(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Meters is equal to {result} Feet.");
                 break;
             case 2:
-                result = Converter.FeetToMeters(input);
+                result = Distance.FeetToMeters(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Feet is equal to {result} Meters.");
                 break;
@@ -219,12 +225,12 @@ class Program
         switch (choice)
         {
             case 1:
-                result = Converter.KilogramsToPounds(input);
+                result = Weight.KilogramsToPounds(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Kilograms is equal to {result} Pounds.");
                 break;
             case 2:
-                result = Converter.PoundsToKilograms(input);
+                result = Weight.PoundsToKilograms(input);
                 result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Pounds is equal to {result} Kilograms.");
                 break;
