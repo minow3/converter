@@ -48,7 +48,7 @@ class Program
             Console.WriteLine("1. Temperature Conversion");
             Console.WriteLine("2. Distance Conversion");
             Console.WriteLine("3. Weight Conversion");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. Exit\n");
 
             int choice;
             if (!int.TryParse(Console.ReadLine(), out choice))
@@ -92,7 +92,7 @@ class Program
         }
 
         double input, result;
-        Console.Write("Enter temperature: ");
+        Console.Write("\nEnter temperature: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
             Console.WriteLine("Invalid input! Please enter a valid number.");
@@ -103,10 +103,12 @@ class Program
         {
             case 1:
                 result = Converter.CelsiusToFahrenheit(input);
+                result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Celsius is equal to {result} Fahrenheit.");
                 break;
             case 2:
                 result = Converter.FahrenheitToCelsius(input);
+                result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Fahrenheit is equal to {result} Celsius.");
                 break;
         }
@@ -126,7 +128,7 @@ class Program
         }
 
         double input, result;
-        Console.Write("Enter distance: ");
+        Console.Write("\nEnter distance: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
             Console.WriteLine("Invalid input! Please enter a valid number.");
@@ -137,10 +139,12 @@ class Program
         {
             case 1:
                 result = Converter.MetersToFeet(input);
+                result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Meters is equal to {result} Feet.");
                 break;
             case 2:
                 result = Converter.FeetToMeters(input);
+                result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Feet is equal to {result} Meters.");
                 break;
         }
@@ -160,7 +164,7 @@ class Program
         }
 
         double input, result;
-        Console.Write("Enter weight: ");
+        Console.Write("\nEnter weight: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
             Console.WriteLine("Invalid input! Please enter a valid number.");
@@ -171,10 +175,12 @@ class Program
         {
             case 1:
                 result = Converter.KilogramsToPounds(input);
+                result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Kilograms is equal to {result} Pounds.");
                 break;
             case 2:
                 result = Converter.PoundsToKilograms(input);
+                result = Math.Round(result, 2);
                 Console.WriteLine($"{input} Pounds is equal to {result} Kilograms.");
                 break;
         }

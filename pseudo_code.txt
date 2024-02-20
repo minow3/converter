@@ -14,7 +14,3 @@ Create class Conversion
 		return Kelvin (formula)
 	create method KelvinToFahrenheit (public static double)
 		return Fahrenheit (formula)
-
-	// Distance conversion methods
-	create method CelsiusToFahrenheit (public static double)
-		return Fahrenheit (formula)

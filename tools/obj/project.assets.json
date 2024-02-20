@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\minow\\.nuget\\packages\\": {}
+    "/home/minow3/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\minow\\Desktop\\converter\\tools\\tools.csproj",
+      "projectUniqueName": "/home/minow3/Desktop/converter/tools/tools.csproj",
       "projectName": "tools",
-      "projectPath": "C:\\Users\\minow\\Desktop\\converter\\tools\\tools.csproj",
-      "packagesPath": "C:\\Users\\minow\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\minow\\Desktop\\converter\\tools\\obj\\",
+      "projectPath": "/home/minow3/Desktop/converter/tools/tools.csproj",
+      "packagesPath": "/home/minow3/.nuget/packages/",
+      "outputPath": "/home/minow3/Desktop/converter/tools/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\minow\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/minow3/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -59,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
