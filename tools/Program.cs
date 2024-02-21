@@ -70,15 +70,31 @@ class Program
     static void Main(string[] args)
     {
         Console.Clear();
-        Console.WriteLine("Welcome to the Conversion app!");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\n Welcome to the Unit Conversion app!");
+        Console.ResetColor();
+        
 
         while (true)
         {
-            Console.WriteLine("\nPlease select an option:\n");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("\n----------------------------------------");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("\nPlease select an option:");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("\n----------------------------------------");
+            Console.ResetColor();
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("1. Temperature Conversion");
             Console.WriteLine("2. Distance Conversion");
             Console.WriteLine("3. Weight Conversion");
             Console.WriteLine("4. Exit\n");
+            Console.ResetColor();
 
             int choice;
             if (!int.TryParse(Console.ReadLine(), out choice))
@@ -104,14 +120,14 @@ class Program
                 case 4:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine("\nThank you for using Conversion app\n");
+                    Console.WriteLine("\nThank you for using Unit Conversion app\n");
                     Console.WriteLine("Exiting the program...\n");
                     Console.ResetColor();
                     return;
                 default:
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("\nInvalid option! Please select a valid option.\n");
+                    Console.WriteLine("\nInvalid option! Please select a valid option.");
                     Console.ResetColor();
                     break;
             }
@@ -121,33 +137,47 @@ class Program
     static void TemperatureConversion()
     {
         Console.Clear();
-        Console.WriteLine("\nTemperature Conversion\n");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\nTemperature Conversion");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("1. Celsius to Fahrenheit");
         Console.WriteLine("2. Fahrenheit to Celsius");
         Console.WriteLine("3. Celsius to Kelvin");
         Console.WriteLine("4. Kelvin to Celsius");
         Console.WriteLine("5. Fahrenheit to Kelvin");
-        Console.WriteLine("6. Kelvin to Fahrenheit\n");
-        
+        Console.WriteLine("6. Kelvin to Fahrenheit");
+        Console.WriteLine("\nEnter option: ");
+        Console.ResetColor();
 
         int choice;
         if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5 && choice != 6 ))
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nInvalid choice! Please enter selection between 1 - 6.\n");
+            Console.WriteLine("\nInvalid choice! Please enter selection between 1 - 6.");
             Console.ResetColor();
             return;
         }
 
         double input, result;
         Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.Write("\nEnter temperature: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nInvalid input! Please enter a valid number.\n");
+            Console.WriteLine("\nInvalid input! Please enter a valid number.");
             Console.ResetColor();
             return;
         }
@@ -190,28 +220,43 @@ class Program
     static void DistanceConversion()
     {
         Console.Clear();
-        Console.WriteLine("\nDistance Conversion\n");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\nDistance Conversion");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("1. Meters to Feet");
-        Console.WriteLine("2. Feet to Meters\n");
+        Console.WriteLine("2. Feet to Meters");
+        Console.WriteLine("\nEnter option: ");
+        Console.ResetColor();
 
         int choice;
         if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2))
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nInvalid choice! Please enter 1 or 2.\n");
+            Console.WriteLine("\nInvalid choice! Please enter 1 or 2.");
             Console.ResetColor();
             return;
         }
 
         double input, result;
         Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.Write("\nEnter distance: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nInvalid input! Please enter a valid number.\n");
+            Console.WriteLine("\nInvalid input! Please enter a valid number.");
             Console.ResetColor();
             return;
         }
@@ -234,28 +279,43 @@ class Program
     static void WeightConversion()
     {
         Console.Clear();
-        Console.WriteLine("\nWeight Conversion\n");
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine("\nWeight Conversion");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine("1. Kilograms to Pounds");
         Console.WriteLine("2. Pounds to Kilograms");
+        Console.WriteLine("\nEnter option: ");
+        Console.ResetColor();
 
         int choice;
         if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2))
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nInvalid choice! Please enter 1 or 2.\n");
+            Console.WriteLine("\nInvalid choice! Please enter 1 or 2.");
             Console.ResetColor();
             return;
         }
 
         double input, result;
         Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Cyan;
+        Console.WriteLine("\n----------------------------------------");
+        Console.ResetColor();
+        Console.ForegroundColor = ConsoleColor.Blue;
         Console.Write("\nEnter weight: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("\nInvalid input! Please enter a valid number.\n");
+            Console.WriteLine("\nInvalid input! Please enter a valid number.");
             Console.ResetColor();
             return;
         }
