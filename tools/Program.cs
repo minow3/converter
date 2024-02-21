@@ -1,7 +1,9 @@
-﻿using System;
+﻿//Tomas Bendaravicius
+//Conversion unit app
+using System;
 
 class Temperature
-{
+{   
     // Temperature conversion methods
     public static double CelsiusToFahrenheit(double celsius)
     {
@@ -62,15 +64,17 @@ class Weight
     }
 }
 
+//Main app
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Welcome to the Conversion Program!");
+        Console.Clear();
+        Console.WriteLine("Welcome to the Conversion app!");
 
         while (true)
         {
-            Console.WriteLine("\nPlease select an option:");
+            Console.WriteLine("\nPlease select an option:\n");
             Console.WriteLine("1. Temperature Conversion");
             Console.WriteLine("2. Distance Conversion");
             Console.WriteLine("3. Weight Conversion");
@@ -79,7 +83,10 @@ class Program
             int choice;
             if (!int.TryParse(Console.ReadLine(), out choice))
             {
-                Console.WriteLine("Invalid input! Please enter a number.");
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("\nInvalid input! Please enter a number.\n");
+                Console.ResetColor();
                 continue;
             }
 
@@ -95,10 +102,17 @@ class Program
                     WeightConversion();
                     break;
                 case 4:
-                    Console.WriteLine("Exiting the program...");
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("\nThank you for using Conversion app\n");
+                    Console.WriteLine("Exiting the program...\n");
+                    Console.ResetColor();
                     return;
                 default:
-                    Console.WriteLine("Invalid option! Please select a valid option.");
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("\nInvalid option! Please select a valid option.\n");
+                    Console.ResetColor();
                     break;
             }
         }
@@ -106,27 +120,35 @@ class Program
 
     static void TemperatureConversion()
     {
-        Console.WriteLine("\nTemperature Conversion");
+        Console.Clear();
+        Console.WriteLine("\nTemperature Conversion\n");
         Console.WriteLine("1. Celsius to Fahrenheit");
         Console.WriteLine("2. Fahrenheit to Celsius");
         Console.WriteLine("3. Celsius to Kelvin");
         Console.WriteLine("4. Kelvin to Celsius");
         Console.WriteLine("5. Fahrenheit to Kelvin");
-        Console.WriteLine("6. Kelvin to Fahrenheit");
+        Console.WriteLine("6. Kelvin to Fahrenheit\n");
         
 
         int choice;
-        if (!int.TryParse(Console.ReadLine(), out choice) || (choice !<= 1 && choice !>= 6))
+        if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2 && choice != 3 && choice != 4 && choice != 5 && choice != 6 ))
         {
-            Console.WriteLine("Invalid choice! Please enter selection between 1 - 6.");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid choice! Please enter selection between 1 - 6.\n");
+            Console.ResetColor();
             return;
         }
 
         double input, result;
+        Console.Clear();
         Console.Write("\nEnter temperature: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
-            Console.WriteLine("Invalid input! Please enter a valid number.");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid input! Please enter a valid number.\n");
+            Console.ResetColor();
             return;
         }
 
@@ -135,54 +157,62 @@ class Program
             case 1:
                 result = Temperature.CelsiusToFahrenheit(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Celsius is equal to {result} Fahrenheit.");
+                Console.WriteLine($"\n{input} Celsius is equal to {result} Fahrenheit.");
                 break;
             case 2:
                 result = Temperature.FahrenheitToCelsius(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Fahrenheit is equal to {result} Celsius.");
+                Console.WriteLine($"\n{input} Fahrenheit is equal to {result} Celsius.");
                 break;
             case 3:
                 result = Temperature.CelsiusToKelvin(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Celsius is equal to {result} Kelvin.");
+                Console.WriteLine($"\n{input} Celsius is equal to {result} Kelvin.");
                 break;
             case 4:
                 result = Temperature.KelvinToCelsius(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Kelvin is equal to {result} Celsius.");
+                Console.WriteLine($"\n{input} Kelvin is equal to {result} Celsius.");
                 break;
             case 5:
                 result = Temperature.FahrenheitToKelvin(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Fahrenheit is equal to {result} Kelvin.");
+                Console.WriteLine($"\n{input} Fahrenheit is equal to {result} Kelvin.");
                 break;
             case 6:
                 result = Temperature.KelvinToFahrenheit(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Kelvin is equal to {result} Fahrenheit.");
+                Console.WriteLine($"\n{input} Kelvin is equal to {result} Fahrenheit.");
                 break;
         }
     }
 
     static void DistanceConversion()
     {
-        Console.WriteLine("\nDistance Conversion");
+        Console.Clear();
+        Console.WriteLine("\nDistance Conversion\n");
         Console.WriteLine("1. Meters to Feet");
-        Console.WriteLine("2. Feet to Meters");
+        Console.WriteLine("2. Feet to Meters\n");
 
         int choice;
         if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2))
         {
-            Console.WriteLine("Invalid choice! Please enter 1 or 2.");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid choice! Please enter 1 or 2.\n");
+            Console.ResetColor();
             return;
         }
 
         double input, result;
+        Console.Clear();
         Console.Write("\nEnter distance: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
-            Console.WriteLine("Invalid input! Please enter a valid number.");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid input! Please enter a valid number.\n");
+            Console.ResetColor();
             return;
         }
 
@@ -191,34 +221,42 @@ class Program
             case 1:
                 result = Distance.MetersToFeet(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Meters is equal to {result} Feet.");
+                Console.WriteLine($"\n{input} Meters is equal to {result} Feet.");
                 break;
             case 2:
                 result = Distance.FeetToMeters(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Feet is equal to {result} Meters.");
+                Console.WriteLine($"\n{input} Feet is equal to {result} Meters.");
                 break;
         }
     }
 
     static void WeightConversion()
     {
-        Console.WriteLine("\nWeight Conversion");
+        Console.Clear();
+        Console.WriteLine("\nWeight Conversion\n");
         Console.WriteLine("1. Kilograms to Pounds");
         Console.WriteLine("2. Pounds to Kilograms");
 
         int choice;
         if (!int.TryParse(Console.ReadLine(), out choice) || (choice != 1 && choice != 2))
         {
-            Console.WriteLine("Invalid choice! Please enter 1 or 2.");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid choice! Please enter 1 or 2.\n");
+            Console.ResetColor();
             return;
         }
 
         double input, result;
+        Console.Clear();
         Console.Write("\nEnter weight: ");
         if (!double.TryParse(Console.ReadLine(), out input))
         {
-            Console.WriteLine("Invalid input! Please enter a valid number.");
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nInvalid input! Please enter a valid number.\n");
+            Console.ResetColor();
             return;
         }
 
@@ -227,12 +265,12 @@ class Program
             case 1:
                 result = Weight.KilogramsToPounds(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Kilograms is equal to {result} Pounds.");
+                Console.WriteLine($"\n{input} Kilograms is equal to {result} Pounds.");
                 break;
             case 2:
                 result = Weight.PoundsToKilograms(input);
                 result = Math.Round(result, 2);
-                Console.WriteLine($"{input} Pounds is equal to {result} Kilograms.");
+                Console.WriteLine($"\n{input} Pounds is equal to {result} Kilograms.");
                 break;
         }
     }
