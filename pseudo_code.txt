@@ -1,16 +1,144 @@
-//All conversions Temperature, Distance, Weight
-Create class Conversion
+class Temperature
+    CelsiusToFahrenheit(celsius)
+        return (celsius * 9 / 5) + 32
+    
+    FahrenheitToCelsius(fahrenheit)
+        return (fahrenheit - 32) * 5 / 9
+    
+    CelsiusToKelvin(celsius)
+        return celsius + 273.15
+    
+    KelvinToCelsius(kelvin)
+        return kelvin - 273.15
+    
+    FahrenheitToKelvin(fahrenheit)
+        return (fahrenheit - 32) * 5 / 9 + 273.15
+    
+    KelvinToFahrenheit(fahrenheit)
+        return (fahrenheit - 273.15) * 9 / 5 + 32
 
-	//Temperature calculation methods
-	create method CelsiusToFahrenheit (public static double)
-		return Fahrenheit (formula)
-	create method FahrenheitToCelsius (public static double)
-		return Celsius (formula)
-	create method CelsiusToKelvin (public static double)
-		return Kelvin (formula)
-	create method KelvinToCelsius (public static double)
-		return Celsius (formula)
-	create method FahrenheitToKelvin (public static double)
-		return Kelvin (formula)
-	create method KelvinToFahrenheit (public static double)
-		return Fahrenheit (formula)
+class Distance
+    MetersToFeet(meters)
+        return meters * 3.28084
+    
+    FeetToMeters(feet)
+        return feet / 3.28084
+
+class Weight
+    KilogramsToPounds(kilograms)
+        return kilograms * 2.20462
+    
+    PoundsToKilograms(pounds)
+        return pounds / 2.20462
+
+main()
+    while true
+        display("Welcome to the Conversion app!")
+        display("\nPlease select an option:\n")
+        display("1. Temperature Conversion")
+        display("2. Distance Conversion")
+        display("3. Weight Conversion")
+        display("4. Exit\n")
+        choice = input()
+        
+        switch choice
+            case 1
+                TemperatureConversion()
+            case 2
+                DistanceConversion()
+            case 3
+                WeightConversion()
+            case 4
+                display("\nThank you for using Conversion app\n")
+                display("Exiting the program...\n")
+                return
+            default
+                display("\nInvalid option! Please select a valid option.\n")
+
+TemperatureConversion()
+    display("\nTemperature Conversion\n")
+    display("1. Celsius to Fahrenheit")
+    display("2. Fahrenheit to Celsius")
+    display("3. Celsius to Kelvin")
+    display("4. Kelvin to Celsius")
+    display("5. Fahrenheit to Kelvin")
+    display("6. Kelvin to Fahrenheit\n")
+    choice = input()
+    
+    switch choice
+        case 1
+            display("\nEnter temperature: ")
+            input = input()
+            result = CelsiusToFahrenheit(input)
+            display("\n" + input + " Celsius is equal to " + result + " Fahrenheit.")
+		case 2
+            display("\nEnter temperature: ")
+            input = input()
+            result = FahrenheitToCelsius(input)
+            display("\n" + input + " Fahrenheit is equal to " + result + " Celsius.")
+		case 3
+            display("\nEnter temperature: ")
+            input = input()
+            result = CelsiusToKelvin(input)
+            display("\n" + input + " Celsius is equal to " + result + " Kelvin.")
+		case 4
+            display("\nEnter temperature: ")
+            input = input()
+            result = KelvinToCelsius(input)
+            display("\n" + input + " Kelvin is equal to " + result + " Celsius.")
+		case 5
+            display("\nEnter temperature: ")
+            input = input()
+            result = FahrenheitToKelvin (input)
+            display("\n" + input + " Fahrenheit is equal to " + result + " Kelvin.")
+		case 6
+            display("\nEnter temperature: ")
+            input = input()
+            result = KelvinToFahrenheit(input)
+            display("\n" + input + " Kelvin is equal to " + result + " Fahrenheit.")
+        
+        default
+            display("\nInvalid choice! Please enter selection between 1 - 6.\n")
+
+DistanceConversion()
+    display("\nDistance Conversion\n")
+    display("1. Meters to Feet")
+    display("2. Feet to Meters")
+    choice = input()
+    
+    switch choice
+        case 1
+            display("\nEnter temperature: ")
+            input = input()
+            result = MetersToFeet(input)
+            display("\n" + input + " Meters is equal to " + result + " Feet.")
+		case 2
+            display("\nEnter temperature: ")
+            input = input()
+            result = FeetToMeters(input)
+            display("\n" + input + " Feet is equal to " + result + " Meters.")
+        
+        default
+            display("\nInvalid choice! Please enter selection between 1 - 2.\n")
+
+WeightConversion()
+    display("\nWeight Conversion\n")
+    display("1. Kilograms to Pounds")
+    display("2. Pounds to Kilograms")
+    choice = input()
+    
+    switch choice
+        case 1
+            display("\nEnter temperature: ")
+            input = input()
+            result = KilogramsToPounds(input)
+            display("\n" + input + " Kilograms is equal to " + result + " Pounds.")
+		case 2
+            display("\nEnter temperature: ")
+            input = input()
+            result = PoundsToKilograms(input)
+            display("\n" + input + " Pounds is equal to " + result + " Kilograms.")
+        
+        default
+            display("\nInvalid choice! Please enter selection between 1 - 2.\n")
+	
